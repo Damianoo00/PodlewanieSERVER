@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Przepływomierz DB</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+</style>
+<script src=""></script>
+<body>
+
+
+
+<div class="">
+ <h1>Przepływomierz DB</h1>
+
+ {% if flow_db_list %}
+ <ul>
+     {% for data in flow_db_list %}
+     <li>
+        {{ data.value }} | {{ data.pub_date }}
+     </li>
+     {% endfor %}
+ </ul>
+
+ {% else %}
+ <p>No data</p>
+ {% endif %}
+
+</div>
+
+</body>
+</html>
